@@ -70,9 +70,10 @@ def get_game():
     return weapons_lists[user_game]
 
 def play():
+    name = input("Enter your name: ")
     weapon = get_game()
     player = get_user_choice(weapon)
-    name = input("Enter your name")
+    
     while player in [0, 1, 2]:
         computer = get_computer_choice(weapon)
         result = determine_winner(player, computer, name)
